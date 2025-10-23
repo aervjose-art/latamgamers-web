@@ -1,0 +1,47 @@
+
+/* style.css - Blue dark theme */
+:root{
+  --bg:#0b0f17;
+  --card:#0f1720;
+  --muted:#9aa6bd;
+  --accent:#2b8cff;
+  --accent-2:#1f6ed8;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#06080b 0%, #0b0f17 100%);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:1100px;margin:40px auto;padding:20px;}
+.header{display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:16px;}
+.logo .mark{width:56px;height:56px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:white;box-shadow:0 6px 18px rgba(43,140,255,0.12)}
+.title{font-size:20px;font-weight:700}
+.nav{display:flex;gap:10px;align-items:center}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:var(--muted);text-decoration:none;}
+.hero{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+.card h3{margin:0 0 8px 0;font-size:18px}
+.features{list-style:none;padding:0;margin:8px 0 14px 0;color:var(--muted)}
+.download{display:flex;gap:10px;align-items:center;justify-content:flex-end;margin-top:14px}
+.btn-primary{background:linear-gradient(180deg,var(--accent),var(--accent-2));padding:10px 16px;border-radius:10px;border:none;color:white;font-weight:700;cursor:pointer}
+.btn-secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 16px;border-radius:10px;color:var(--muted);cursor:pointer}
+
+.gallery{margin-top:40px}
+.gallery .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery img{width:100%;border-radius:10px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.footer{margin-top:40px;padding:18px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,0.03)}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr; }
+  .gallery .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:520px){
+  .gallery .grid{grid-template-columns:1fr}
+  .logo .mark{width:44px;height:44px}
+}
